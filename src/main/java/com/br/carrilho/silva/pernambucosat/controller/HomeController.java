@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.xml.ws.Response;
 
 @Controller
-@RequestMapping("admin")
+@RequestMapping("/")
 public class HomeController {
 
 
-    @RequestMapping(path = "/",method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     @PreAuthorize("hasRole('USER')")
     public ResponseEntity<?> home() {
 
