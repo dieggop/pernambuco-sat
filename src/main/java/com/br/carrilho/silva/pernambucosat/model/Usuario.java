@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -26,6 +27,9 @@ public  class Usuario {
 
     @NotEmpty
     private boolean admin;
+
+    @ManyToMany
+    private List<Regras> regras;
 
     public Long getId() {
         return id;
@@ -67,6 +71,14 @@ public  class Usuario {
         this.admin = admin;
     }
 
+    public List<Regras> getRegras() {
+        return regras;
+    }
+
+    public void setRegras(List<Regras> regras) {
+        this.regras = regras;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -77,4 +89,6 @@ public  class Usuario {
                 ", admin=" + admin +
                 '}';
     }
+
+
 }
