@@ -1,6 +1,7 @@
 package com.br.carrilho.silva.pernambucosat.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -11,7 +12,7 @@ public class Categoria {
 	 @GeneratedValue(strategy= GenerationType.IDENTITY)
 	 private Long id;
 
-		@NotEmpty
+		@NotNull
 	    @Column(unique = true)
 	    private String categoria;
 

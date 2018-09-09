@@ -1,13 +1,15 @@
 package com.br.carrilho.silva.pernambucosat.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.hibernate.validator.constraints.NotEmpty;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Cidade {
@@ -16,74 +18,52 @@ public class Cidade {
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long id;
 
-	@NotEmpty
-	private String ciadde; 
+	@NotNull
+	private String nome; 	
 	
-	@NotEmpty
-	private String bairro;
+	@NotNull
+	@ManyToOne	
+	private Uf uf;
 	
-	@NotEmpty
-	private String uf;
-	
-	@NotEmpty
-	private String logradouro;
-	
-	@NotEmpty
-	@JsonIgnore
-	private String cep;
-	
-	@NotEmpty
-		private String municipio;
-	
-	
-	public String getCiadde() {
-		return ciadde;
+	@ManyToMany
+	@JoinTable(name="cidade_empresa")
+	List<Empresa> empresas;
+
+	public Long getId() {
+		return id;
 	}
-	public void setCiadde(String ciadde) {
-		this.ciadde = ciadde;
+
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public String getBairro() {
-		return bairro;
+
+	public String getNome() {
+		return nome;
 	}
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public String getUf() {
+
+	public Uf getUf() {
 		return uf;
 	}
-	public void setUf(String uf) {
+
+	public void setUf(Uf uf) {
 		this.uf = uf;
 	}
-	public String getLogradouro() {
-		return logradouro;
+
+	public List<Empresa> getEmpresas() {
+		return empresas;
 	}
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
+
+	public void setEmpresas(List<Empresa> empresas) {
+		this.empresas = empresas;
 	}
-	public String getCep() {
-		return cep;
-	}
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-	public String getMunicipio() {
-		return municipio;
-	}
-	public void setMunicipio(String municipio) {
-		this.municipio = municipio;
+
+	@Override
+	public String toString() {
+		return "Cidade [id=" + id + ", nome=" + nome + ", uf=" + uf + ", empresas=" + empresas + "]";
 	}
 	
-	 @Override
-	    public String toString() {
-	        return "Cidade{" +
-	                "ciadde=" + ciadde +
-	                ", bairro='" + bairro + '\'' +
-	                ", uf='" + uf + '\'' +
-	                ", logradouro='" + logradouro + '\'' +
-	                ", cep='" + cep + '\'' +
-	                ", municipio=" + municipio +
-	                '}';
-	    }
-	
-	 
 }

@@ -1,7 +1,14 @@
 package com.br.carrilho.silva.pernambucosat.model;
-import javax.persistence.*;
+import java.util.List;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Fornecedor {
@@ -10,127 +17,76 @@ public class Fornecedor {
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long id;
 	 
-	@NotEmpty 
+	@NotNull 
 	private String nomeFornecedor;
 	
-	@NotEmpty
-	private String endereco;
-	
-	@NotEmpty
+	@NotNull
 	private String cnpj;
 	
-	@NotEmpty
-	private String inscricaoEstadual;
-	
-	@NotEmpty
-	private String cep;
-	
-	@NotEmpty
-	private String numero;
-	
-	@NotEmpty
-	private String bairro;
-	
-	@NotEmpty
-	private String cidade;
-	
-	@NotEmpty
-	private String uf;
-	
-	@NotEmpty
+	@ManyToMany
+	@JoinTable(name="fornecedor_endereco")
+	private List<Endereco> enderecos;
+
+	@NotNull
 	private String foneContato;
 	
-	@NotEmpty
+	@NotNull
 	private String email;
 
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getNomeFornecedor() {
 		return nomeFornecedor;
 	}
+
 	public void setNomeFornecedor(String nomeFornecedor) {
 		this.nomeFornecedor = nomeFornecedor;
 	}
-	public String getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
+
 	public String getCnpj() {
 		return cnpj;
 	}
+
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-	public String getInscricaoEstadual() {
-		return inscricaoEstadual;
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
 	}
-	public void setInscricaoEstadual(String inscricaoEstadual) {
-		this.inscricaoEstadual = inscricaoEstadual;
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
 	}
-	public String getCep() {
-		return cep;
-	}
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-	public String getNumero() {
-		return numero;
-	}
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
-	public String getBairro() {
-		return bairro;
-	}
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-	public String getCidade() {
-		return cidade;
-	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-	public String getUf() {
-		return uf;
-	}
-	public void setUf(String uf) {
-		this.uf = uf;
-	}
-	public String getContato() {
+
+	public String getFoneContato() {
 		return foneContato;
 	}
-	public void setContato(String contato) {
-		this.foneContato = contato;
+
+	public void setFoneContato(String foneContato) {
+		this.foneContato = foneContato;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	@Override
-    public String toString() {
-        return "Fornecedor{" +
-                "nomeFornecedor=" + nomeFornecedor +
-                ", endereco='" + endereco + '\'' +
-                ", cnpj='" + cnpj + '\'' +
-                ", inscricaoEstadual='" + inscricaoEstadual + '\'' +
-                ", cep='" + cep + '\'' +
-                ", numero='" + numero + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", cidade='" + cidade + '\'' +
-                ", uf='" + uf + '\'' +
-                ", foneContato='" + foneContato + '\'' +
-                ", email=" + email +
-                '}';
-    }
+	public String toString() {
+		return "Fornecedor [id=" + id + ", nomeFornecedor=" + nomeFornecedor + ", cnpj=" + cnpj + ", enderecos="
+				+ enderecos + ", foneContato=" + foneContato + ", email=" + email + "]";
+	}
+
+	
 	
 }

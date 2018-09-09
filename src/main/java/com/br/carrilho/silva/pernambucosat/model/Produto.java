@@ -2,9 +2,11 @@ package com.br.carrilho.silva.pernambucosat.model;
 
 import java.util.Date;
 
-import javax.persistence.*;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Produto {
@@ -12,40 +14,40 @@ public class Produto {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 	
-	@NotEmpty 
+	@NotNull
 	private String codigo;
 	
-	@NotEmpty 
+	@NotNull
 	private String descricao;
 	
-	@NotEmpty 
+	@NotNull
 	private Date   dataEntrada; 
 	
-	@NotEmpty 
+	@NotNull
 	private Date   dataSaida; 
 	
-	@NotEmpty 
+	@NotNull
 	private String tipoEntrada;
 	
-	@NotEmpty 
+	@NotNull
 	private String numeroNfCompra;
 	
-	@NotEmpty 
+	@NotNull
 	private Long precoCusto; 
 	
-	@NotEmpty 
+	@NotNull
 	private Long precoVenda; 
 
-	@NotEmpty 
+	@NotNull
 	private Long quantidade;
 	
-	@NotEmpty 
+	@NotNull
 	private Long quantidadeMinima; 
 	
-	@NotEmpty 
+	@NotNull
 	private String Lote;
 	
-	@NotEmpty 
+	@NotNull
 	private String observacoes; 
 	
 	 @Override
