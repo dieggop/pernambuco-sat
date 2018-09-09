@@ -17,6 +17,7 @@ import javax.xml.ws.Response;
 @RequestMapping("/")
 public class HomeController {
 
+/*
 
     @RequestMapping(method = RequestMethod.GET)
     @PreAuthorize("hasRole('USER')")
@@ -31,6 +32,7 @@ public class HomeController {
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
+*/
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
