@@ -10,29 +10,31 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Endereco {
 
-	 @Id
-	 @GeneratedValue(strategy= GenerationType.IDENTITY)
-	 private Long id;
-	 
-	 @NotNull
-		private String endereco;
-		
-		@NotNull
-		private String cep;
-		
-		@NotNull
-		private String numero;
-		
-		@NotNull
-		private String bairro;
-		
-		@NotNull
-		@ManyToOne
-		private Cidade cidade;
-		
-		@NotNull
-		@ManyToOne
-		private Uf uf;
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long id;
+
+	@NotNull
+	private String endereco;
+
+	@NotNull
+	private String cep;
+
+	@NotNull
+	private String numero;
+
+	@NotNull
+	private String bairro;
+
+	@NotNull
+	@ManyToOne
+	private Cidade cidade;
+
+	private String complemento;
+
+	@NotNull
+	@ManyToOne
+	private Uf uf;
 
 	public Long getId() {
 		return id;
@@ -90,24 +92,38 @@ public class Endereco {
 		this.uf = uf;
 	}
 
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
 	public Endereco() {
 	}
 
-	public Endereco(Long id, @NotNull String endereco, @NotNull String cep, @NotNull String numero,
-			@NotNull String bairro, @NotNull Cidade cidade, @NotNull Uf uf) {
-		super();
-		this.id = id;
+	public Endereco(@NotNull String endereco, @NotNull String cep, @NotNull String numero, @NotNull String bairro, @NotNull Cidade cidade, String complemento, @NotNull Uf uf) {
 		this.endereco = endereco;
 		this.cep = cep;
 		this.numero = numero;
 		this.bairro = bairro;
 		this.cidade = cidade;
+		this.complemento = complemento;
 		this.uf = uf;
 	}
 
 	@Override
 	public String toString() {
-		return "Endereco [id=" + id + ", endereco=" + endereco + ", cep=" + cep + ", numero=" + numero + ", bairro="
-				+ bairro + ", cidade=" + cidade + ", uf=" + uf + "]";
+		return "Endereco{" +
+				"id=" + id +
+				", endereco='" + endereco + '\'' +
+				", cep='" + cep + '\'' +
+				", numero='" + numero + '\'' +
+				", bairro='" + bairro + '\'' +
+				", cidade=" + cidade +
+				", complemento='" + complemento + '\'' +
+				", uf=" + uf +
+				'}';
 	}
 }

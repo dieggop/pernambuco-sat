@@ -1,73 +1,69 @@
 package com.br.carrilho.silva.pernambucosat.model;
 
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
 public class Produto {
 	@Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
-	
-	@NotNull
-	private String codigo;
-	
-	@NotNull
-	private String descricao;
-	
-	@NotNull
-	private Date   dataEntrada; 
-	
-	@NotNull
-	private Date   dataSaida; 
-	
-	@NotNull
-	private String tipoEntrada;
-	
-	@NotNull
-	private String numeroNfCompra;
-	
-	@NotNull
-	private Long precoCusto; 
-	
-	@NotNull
-	private Long precoVenda; 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
 	@NotNull
-	private Long quantidade;
-	
+	private String codigo;
+
 	@NotNull
-	private Long quantidadeMinima; 
-	
+	private String descricao;
+
 	@NotNull
-	private String Lote;
-	
+	private String observacoes;
+
 	@NotNull
-	private String observacoes; 
-	
-	 @Override
-	    public String toString() {
-	        return "Produto{" +
-	                "id=" + id +
-	                ", codigo='" + codigo + '\'' +
-	                ", descricao='" + descricao + '\'' +
-	                ", dataEntrada='" + dataEntrada + '\'' +
-	                ", dataSaida='" + dataSaida + '\'' +
-	                ", tipoEntrada='" + tipoEntrada + '\'' +
-	                ", numeroNfCompra='" + numeroNfCompra + '\'' +
-	                 ", precoCusto='" + precoCusto + '\'' +
-	                ", precoVenda='" + precoVenda + '\'' +
-	                ", quantidade='" + quantidade + '\'' +
-	                 ", quantidadeMinima='" + quantidadeMinima + '\'' +
-	                ", Lote='" + Lote + '\'' +
-	                ", admin=" + observacoes +
-	                '}';
-	    }
-	
-	
+    private Long quantidadeMinima;
+
+	@OneToMany(mappedBy = "produto")
+	private List<EntradaProduto> entradaProdutos;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getObservacoes() {
+		return observacoes;
+	}
+
+	public void setObservacoes(String observacoes) {
+		this.observacoes = observacoes;
+	}
+
+	public List<EntradaProduto> getEntradaProdutos() {
+		return entradaProdutos;
+	}
+
+	public void setEntradaProdutos(List<EntradaProduto> entradaProdutos) {
+		this.entradaProdutos = entradaProdutos;
+	}
 }
