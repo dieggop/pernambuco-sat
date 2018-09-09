@@ -14,20 +14,16 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Cidade {
 	
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
 	@NotNull
-	private String nome; 	
-	
+	private String nome;
+
 	@NotNull
-	@ManyToOne	
+	@ManyToOne
 	private Uf uf;
-	
-	@ManyToMany
-	@JoinTable(name="cidade_empresa")
-	List<Empresa> empresas;
 
 	public Long getId() {
 		return id;
@@ -53,17 +49,12 @@ public class Cidade {
 		this.uf = uf;
 	}
 
-	public List<Empresa> getEmpresas() {
-		return empresas;
-	}
-
-	public void setEmpresas(List<Empresa> empresas) {
-		this.empresas = empresas;
-	}
-
 	@Override
 	public String toString() {
-		return "Cidade [id=" + id + ", nome=" + nome + ", uf=" + uf + ", empresas=" + empresas + "]";
+		return "Cidade{" +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				", uf=" + uf +
+				'}';
 	}
-	
 }

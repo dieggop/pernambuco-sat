@@ -2,11 +2,7 @@ package com.br.carrilho.silva.pernambucosat.model;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity	
@@ -21,6 +17,9 @@ public class Uf {
 	 
 	 @OneToMany(mappedBy="uf")
 	 private List<Cidade> cidades;
+
+	 @ManyToOne
+	 private Pais pais;
 
 	public Long getId() {
 		return id;

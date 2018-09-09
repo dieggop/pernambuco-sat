@@ -12,13 +12,13 @@ public class Categoria {
 	 @GeneratedValue(strategy= GenerationType.IDENTITY)
 	 private Long id;
 
-		@NotNull
-	    @Column(unique = true)
-	    private String categoria;
+	@NotNull
+	@Column(unique = true)
+	private String categoria;
 
-	    public Long getId() {
-		return id;
-	}
+	public Long getId() {
+	return id;
+}
 
 	public void setId(Long id) {
 		this.id = id;
@@ -31,13 +31,13 @@ public class Categoria {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-		
+
 		 @Override
-		    public String toString() {
-		        return "Categoria{" +
-		                "id=" + id +
-		                ", categoria=" + categoria	 +
-		                '}';
-		    }
+			public String toString() {
+				return "Categoria{" +
+						"id=" + id +
+						", categoria=" + categoria	 +
+						'}';
+			}
 
 }
