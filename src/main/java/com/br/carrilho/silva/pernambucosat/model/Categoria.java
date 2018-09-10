@@ -3,9 +3,7 @@ package com.br.carrilho.silva.pernambucosat.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
-@Entity	
+@Entity
 public class Categoria {
 	
 	 @Id

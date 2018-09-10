@@ -1,9 +1,9 @@
 package com.br.carrilho.silva.pernambucosat.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 
@@ -14,18 +14,18 @@ public  class Usuario {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty
+    @NotNull
     @Column(unique = true)
     private String username;
 
-    @NotEmpty
+    @NotNull
     @JsonIgnore
     private String password;
 
-    @NotEmpty
+    @NotNull
     private String name;
 
-    @NotEmpty
+    @NotNull
     private boolean admin;
 
     @ManyToMany
