@@ -31,64 +31,79 @@ public  class Usuario {
     @ManyToMany
     private List<Regras> regras;
 
-    public Long getId() {
-        return id;
-    }
+    private String email;
+    
+    private Long numeroTelefone;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public boolean isAdmin() {
-        return admin;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
-    }
+	public boolean isAdmin() {
+		return admin;
+	}
 
-    public List<Regras> getRegras() {
-        return regras;
-    }
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
 
-    public void setRegras(List<Regras> regras) {
-        this.regras = regras;
-    }
+	public List<Regras> getRegras() {
+		return regras;
+	}
 
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", admin=" + admin +
-                '}';
-    }
+	public void setRegras(List<Regras> regras) {
+		this.regras = regras;
+	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Long getNumeroTelefone() {
+		return numeroTelefone;
+	}
+
+	public void setNumeroTelefone(Long numeroTelefone) {
+		this.numeroTelefone = numeroTelefone;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", username=" + username + ", password=" + password + ", name=" + name + ", admin="
+				+ admin + ", regras=" + regras + ", email=" + email + ", numeroTelefone=" + numeroTelefone + "]";
+	}
+    
 
 }
