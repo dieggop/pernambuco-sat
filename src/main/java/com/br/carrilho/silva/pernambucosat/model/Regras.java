@@ -15,9 +15,6 @@ public class Regras implements Serializable {
 
     private String regra;
 
-    @ManyToMany(mappedBy = "regras")
-    private List<Usuario> usuarios;
-
 
     public Long getId() {
         return id;
@@ -35,11 +32,4 @@ public class Regras implements Serializable {
         this.regra = regra;
     }
 
-    public List<Usuario> getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
-    }
 }
