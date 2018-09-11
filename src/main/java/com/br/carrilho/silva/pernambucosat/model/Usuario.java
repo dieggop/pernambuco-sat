@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Collection;
 import java.util.List;
 
 
@@ -26,14 +27,18 @@ public  class Usuario {
     private String name;
 
     @NotNull
-    private boolean admin;
+    private boolean ativo;
 
-    @ManyToMany
-    private List<Regras> regras;
+    @ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name="usuario_regras",
+	joinColumns = { @JoinColumn(name = "usuarios_id")},
+	inverseJoinColumns = { @JoinColumn(name = "regras_id") }
+	)
+    private Collection<Regras> regras;
 
     private String email;
     
-    private Long numeroTelefone;
+    private String numeroTelefone;
 
 	public Long getId() {
 		return id;
@@ -67,19 +72,19 @@ public  class Usuario {
 		this.name = name;
 	}
 
-	public boolean isAdmin() {
-		return admin;
+	public boolean isAtivo() {
+		return ativo;
 	}
 
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
 	}
 
-	public List<Regras> getRegras() {
+	public Collection<Regras> getRegras() {
 		return regras;
 	}
 
-	public void setRegras(List<Regras> regras) {
+	public void setRegras(Collection<Regras> regras) {
 		this.regras = regras;
 	}
 
@@ -91,18 +96,18 @@ public  class Usuario {
 		this.email = email;
 	}
 
-	public Long getNumeroTelefone() {
+	public String getNumeroTelefone() {
 		return numeroTelefone;
 	}
 
-	public void setNumeroTelefone(Long numeroTelefone) {
+	public void setNumeroTelefone(String numeroTelefone) {
 		this.numeroTelefone = numeroTelefone;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", username=" + username + ", password=" + password + ", name=" + name + ", admin="
-				+ admin + ", regras=" + regras + ", email=" + email + ", numeroTelefone=" + numeroTelefone + "]";
+		return "Usuario [id=" + id + ", username=" + username + ", password=" + password + ", name=" + name + ", ativo="
+				+ ativo + ", regras=" + regras + ", email=" + email + ", numeroTelefone=" + numeroTelefone + "]";
 	}
     
 

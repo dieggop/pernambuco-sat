@@ -1,5 +1,6 @@
 package com.br.carrilho.silva.pernambucosat.security.service;
 
+import com.br.carrilho.silva.pernambucosat.model.Regras;
 import com.br.carrilho.silva.pernambucosat.model.Usuario;
 import com.br.carrilho.silva.pernambucosat.repository.UserRepository;
 import org.slf4j.Logger;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.BasePathAwareController;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -16,8 +18,7 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Component
 public class CustomUserDetailsService  implements UserDetailsService {
@@ -40,11 +41,17 @@ public class CustomUserDetailsService  implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
 
 
-        List<GrantedAuthority> authorityListAdmin = AuthorityUtils.createAuthorityList("ROLE_USER", "ROLE_ADMIN");
-        List<GrantedAuthority> authorityListsUer = AuthorityUtils.createAuthorityList("ROLE_USER");
+//        List<GrantedAuthority> authorityListAdmin = AuthorityUtils.createAuthorityList("ROLE_USER", "ROLE_ADMIN");
+//        List<GrantedAuthority> authorityListsUer = AuthorityUtils.createAuthorityList("ROLE_USER");
+        List<GrantedAuthority> authorityListsUer = null;
 
-        System.out.println(usuario.toString());
-        return new User(usuario.getUsername(), usuario.getPassword(), usuario.isAdmin() ? authorityListAdmin : authorityListsUer);
+        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+        for (Regras role : usuario.getRegras()){
+            grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_"+role.getRegra()));
+            System.out.println(role.getRegra());
+        }
+
+        return new User(usuario.getUsername(), usuario.getPassword(), grantedAuthorities);
 
     }
 }
