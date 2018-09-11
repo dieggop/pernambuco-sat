@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html
-        xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
-        layout:decorate="~{layout/layout.html}"
->
-<div layout:fragment="content-sidebar">
+<div th:fragment="sidebar">
     <!-- Left side column. contains the sidebar -->
     <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
@@ -210,4 +203,3 @@
     <!-- =============================================== -->
 
 </div>
-</html>
