@@ -1,18 +1,16 @@
 package com.br.carrilho.silva.pernambucosat.services;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import com.br.carrilho.silva.pernambucosat.model.Cidade;
+import java.util.Optional;
 
 public interface CidadeService {
 
-	void persistirCidade(Cidade ciadde);
-	void apagarProduto(Cidade ciadde);
-	void atualizarCidade(Cidade ciadde);
-	void salvaCidade();
-    Cidade recuperarCidade(Cidade ciadde);
-    List<Cidade> pesquisarCidade(Cidade ciadde);
-    List<Cidade> pesquisaTodasCidades();
-	
+	void apagarCidade(Long id);
+	Cidade salvaCidade(Cidade ciadade);
+	Optional<Cidade> recuperarCidade(Long ciadade);
+    Page<Cidade> pesquisarCidade(String cidade);
+    Page<Cidade> pesquisaTodasCidades(Pageable pageable);
 	
 }
