@@ -12,30 +12,29 @@ public class Categoria {
 
 	@NotNull
 	@Column(unique = true)
-	private String categoria;
+	private String nome;
+
+    public Categoria() {
+
+    }
 
 	public Long getId() {
 	return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Categoria(@NotNull String nome) {
+        this.nome = nome;
+    }
 
-	public String getCategoria() {
-		return categoria;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-		 @Override
-			public String toString() {
-				return "Categoria{" +
-						"id=" + id +
-						", categoria=" + categoria	 +
-						'}';
-			}
-
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

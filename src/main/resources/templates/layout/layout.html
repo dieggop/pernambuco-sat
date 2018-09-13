@@ -30,6 +30,10 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <th:block layout:fragment="css-extra"/>
+
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -60,10 +64,15 @@
 <script src="/modulos/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="/modulos/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
+    <!-- DataTables -->
+    <script src="/modulos/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/modulos/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- SlimScroll -->
 <script src="/modulos/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="/modulos/bower_components/fastclick/lib/fastclick.js"></script>
+
 <!-- AdminLTE App -->
 <script src="/modulos/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -73,5 +82,8 @@
         $('.sidebar-menu').tree()
     })
 </script>
+
+    <th:block layout:fragment="javascript-extra"/>
+
 </body>
 </html>

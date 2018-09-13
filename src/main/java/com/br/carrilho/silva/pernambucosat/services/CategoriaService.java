@@ -1,17 +1,17 @@
 package com.br.carrilho.silva.pernambucosat.services;
 
-import java.util.List;
-
 import com.br.carrilho.silva.pernambucosat.model.Categoria;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import java.util.Optional;
 
 public interface CategoriaService {
 
-	void persistirCategoria(Categoria id);
-	void apagarProduto(Categoria id);
-	void atualizarCategoria(Categoria id);
-	void salvaCategoria();
-    Categoria recuperarCategoria(Categoria categoria);
-    List<Categoria> pesquisarCategoria(Categoria id);
-    List<Categoria> pesquisaTodassCategorias();
+	void apagarCategoria(Long id);
+    Categoria salvaCategoria(Categoria Categoria);
+    Optional<Categoria> recuperarCategoria(Long categoria);
+    Page<Categoria> pesquisarCategoria(String termo);
+    Page<Categoria> pesquisaTodasCategorias(Pageable pageable);
     
 }

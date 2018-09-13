@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sd="http://www.thymeleaf.org/spring-data"
+        layout:decorate="~{layout/contentwrapper.html}"
+>
+<th:block layout:fragment="css-extra">
+<!-- DataTables -->
+<link rel="stylesheet" href="/modulos/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+</th:block>
+<div layout:fragment="content-page">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+           Listar Categorias
+            <small>Controle de Categorias</small>
+        </h1>
+
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Lista</h3>
+
+                <div class="box-tools pull-right">
+                    <a class="btn btn-info btn-sm" th:href="@{/admin/categorias/adicionar}">Adicionar</a>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                        <i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+
+                <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Categoria</th>
+                        <th>Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr  th:each="categoria : ${categorias}">
+                        <td class="col-sm-1" th:text="${categoria.id}"></td>
+                        <td th:text="${categoria.nome}"></td>
+                        <td class="col-sm-2">
+                            <div class="btn-group btn-group-sm">
+                                <a th:href="@{/admin/categorias/{id}(id=${categoria.id})}" class="btn btn-sm btn-info">editar</a>
+                                <a th:href="@{/admin/categorias/excluir/{id}(id=${categoria.id})}" onclick="return confirm('Você tem certeza?')" class="btn btn-sm btn-danger">excluir</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>Categoria</th>
+                        <th>Ações</th>
+                    </tr>
+                    </tfoot>
+                </table>
+
+
+            </div>
+            <div class="box-footer">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div sd:pagination-summary="">info</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <nav class="pull-right">
+                            <ul class="pagination" sd:pagination="full">
+                                <!-- Pagination created by SpringDataDialect, this content is just for mockup -->
+                                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.box -->
+
+    </section>
+    <!-- /.content -->
+</div>
+
+
+
+<th:block layout:fragment="javascript-extra">
+    <script>
+        $(function () {
+
+        })
+    </script>
+</th:block>
+</html>

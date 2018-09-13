@@ -39,11 +39,7 @@ public class HomeController {
 
         return "login";
     }
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String admin() {
 
-        return "admin";
-    }
   @RequestMapping(value = "/access-denied", method = RequestMethod.GET)
     public String accessDenied() {
 

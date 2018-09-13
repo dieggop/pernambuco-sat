@@ -9,3 +9,11 @@ INSERT INTO REGRAS (regra) values ('USER')
 INSERT INTO REGRAS (regra) values ('ADMIN')
 
 INSERT INTO USUARIO_REGRAS (usuarios_id, regras_id) values (1,6)
+
+insert into categoria (nome) values ('categoria 4');
+insert into categoria (nome) values ('categoria 5');
+insert into categoria (nome) values ('categoria 6');
+insert into categoria (nome) values ('categoria 7');
+insert into categoria (nome) values ('categoria 8');
+insert into categoria (nome) values ('categoria 9');
+insert into categoria (nome) values ('categoria 10');
