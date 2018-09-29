@@ -47,7 +47,7 @@ public class CustomUserDetailsService  implements UserDetailsService {
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         for (Regras role : usuario.getRegras()){
-            grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_"+role.getRegra()));
+            grantedAuthorities.add(new SimpleGrantedAuthority(role.getRegra()));
             System.out.println(role.getRegra());
         }
 

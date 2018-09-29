@@ -16,6 +16,7 @@ public class Produto {
 	private String codigo;
 
 	@NotNull
+    @Column(unique = true)
 	private String descricao;
 
 	@NotNull
@@ -65,5 +66,13 @@ public class Produto {
 
 	public void setEntradaProdutos(List<EntradaProduto> entradaProdutos) {
 		this.entradaProdutos = entradaProdutos;
+	}
+
+	public Long getQuantidadeMinima() {
+		return quantidadeMinima;
+	}
+
+	public void setQuantidadeMinima(Long quantidadeMinima) {
+		this.quantidadeMinima = quantidadeMinima;
 	}
 }
