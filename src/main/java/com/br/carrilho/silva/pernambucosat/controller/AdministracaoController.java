@@ -27,6 +27,7 @@ import java.util.Optional;
 @RequestMapping("/admin")
 public class AdministracaoController {
 
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping(method = RequestMethod.GET)
     public String admin() {
 
