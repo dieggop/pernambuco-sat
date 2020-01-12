@@ -1,4 +1,3 @@
-insert into usuario (ativo,name,password,username,email,numero_telefone) values (1,'Dieggo Carrilho','$2a$10$xlgzlAisr20m4OM3oR0O3OcHzyZWol8AUdpv/ivJLkRl5.CQgS8J6','dieggo','dieggo@email.com','997282363')
 insert into usuario (ativo,name,password,username,email,numero_telefone) values (1,'Ikeblem Silva','$2a$10$xlgzlAisr20m4OM3oR0O3OcHzyZWol8AUdpv/ivJLkRl5.CQgS8J6','kleber','ikeblem@email.com','99999999')
 
 INSERT INTO regras (regra) values ('EDITAR')

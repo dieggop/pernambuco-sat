@@ -1,6 +1,6 @@
 # Pernambuco Sat
 
-Sistema de gerenciamento de frotas
+Sistema de Usuários de Carros
 
 ## Tecnologias
 
@@ -10,5 +10,4 @@ Sistema de gerenciamento de frotas
 * BootStrap 4
 
 ## Desenvolvedores
-* Dieggo Carrilho
 * Ikeblem Silva
