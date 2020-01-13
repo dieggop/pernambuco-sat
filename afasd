@@ -1,0 +1,208 @@
+[33mcommit 0ea6a3b81f065fb8b9ce8869f5f425afb7e8a6a1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: ikebl <ikebl@DESKTOP-7G128VV>
+Date:   Sun Jan 12 12:38:11 2020 -0300
+
+    Adicionando o projeto.
+
+[33mcommit b0dbad39f9e814d2189f22f89c76f6d15f625e82[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 0c8b0ff c71331f
+Author: Dieggo Phillippe Sousa Carrilho <dieggo.carrilho@selfitacademias.com.br>
+Date:   Mon Feb 18 21:47:25 2019 -0300
+
+    Merge branch 'master' of https://github.com/dieggop/pernambuco-sat
+
+[33mcommit 0c8b0ff039be6f1e26653b8b922b6ed4dcc60839[m
+Author: Dieggo Phillippe Sousa Carrilho <dieggo.carrilho@selfitacademias.com.br>
+Date:   Mon Feb 18 21:46:27 2019 -0300
+
+    Ajuste para testes
+    
+    Committer: Dieggo Phillippe Sousa Carrilho <dieggopsc@gmail.com>
+
+[33mcommit c71331f6f1fe6eb31e39dda774d99bc4f825a74a[m
+Author: Dieggo Phillippe Sousa Carrilho <dieggo.carrilho@selfitacademias.com.br>
+Date:   Mon Feb 18 21:46:01 2019 -0300
+
+    Ajuste para testes
+
+[33mcommit 5285bf6619c6857975f7975d79c7828ea5808dbd[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Mon Oct 8 00:18:11 2018 -0300
+
+    .
+
+[33mcommit 581a16288c07a65e3c00adf08f22497238eb2a17[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Fri Sep 28 23:14:54 2018 -0300
+
+    Ajuste para security by Roles. Implementado crud de produto. Ajustes em entidades. Frontend para Produtos
+
+[33mcommit 5ef492853f88dbe10f1ac2abca6f59d95f5a83ad[m
+Author: ikeblem.c.silva <ikeblem.c.silva@CPX-0NRLRSI7LPR.dir.svc.accenture.com>
+Date:   Fri Sep 28 19:10:49 2018 -0300
+
+    commit.
+
+[33mcommit 296c8e8fed0855f0d2f06edcc0313cbba2556b3c[m
+Author: ikeblem.c.silva <ikeblem.c.silva@CPX-0NRLRSI7LPR.dir.svc.accenture.com>
+Date:   Thu Sep 13 13:59:51 2018 -0300
+
+    Desenvolvimento dos services e das implementações dos services.
+
+[33mcommit fa4eea4d773ae9468d6cc45814efc24840bbd627[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Wed Sep 12 23:05:20 2018 -0300
+
+    Campo de busca incluso em layout. Não implementado!
+
+[33mcommit 5709933a1d333637ec6d21cb0e5f3d0aea54bc2d[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Wed Sep 12 23:01:45 2018 -0300
+
+    CRUD de categorias completo.
+
+[33mcommit 313a531f2e84492f1614aa022a3f063ab9895db0[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Tue Sep 11 22:42:43 2018 -0300
+
+    Ajustes em layout, menus e páginas
+
+[33mcommit da72825cc1bfeb09d21940d3777e2aa35fc8fcc6[m
+Author: Dieggo Siqueira <dieggo.p.de.sique@accenture.com>
+Date:   Tue Sep 11 17:05:45 2018 -0300
+
+    PERNAMBUCO SAT
+
+[33mcommit 2ca394ad8e3666efb20b0d0687c1b6017526889d[m
+Author: Dieggo Siqueira <dieggo.p.de.sique@accenture.com>
+Date:   Tue Sep 11 17:05:13 2018 -0300
+
+    Ajustes para recorte de layout, montagem de esquemas para as páginas
+
+[33mcommit 51cd7cb0ba49705aa728ab91a53fa3d7eea08846[m
+Author: Dieggo Siqueira <dieggo.p.de.sique@accenture.com>
+Date:   Tue Sep 11 15:04:42 2018 -0300
+
+    Esquematização da montagem do layout AdminLTE ao projeto
+
+[33mcommit 6cdc3b82d1d05359d84487e617ef22a59724fc9a[m
+Merge: 5465597 7d241a4
+Author: Silva <ikeblem.c.silva@accenture.com>
+Date:   Mon Sep 10 23:56:06 2018 -0300
+
+    realização do merge
+
+[33mcommit 5465597b4a60cc6ae62710b59f16c026945000b3[m
+Author: ikeblem.c.silva <ikeblem.c.silva@CPX-0NRLRSI7LPR.dir.svc.accenture.com>
+Date:   Mon Sep 10 23:21:48 2018 -0300
+
+    commit errado.
+
+[33mcommit 7d241a4daf89b74842d453513aa71903920daa61[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Mon Sep 10 23:05:32 2018 -0300
+
+    Inseridos módulos de AdminLTE para estilização de páginas!
+
+[33mcommit 16119e5fc44444cc89410f0285dad6598dc8a55f[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Mon Sep 10 22:19:34 2018 -0300
+
+    Implementação de regras dinâmicas para Usuários via banco de dados.
+
+[33mcommit d99e5f8ef138dc62c57d662bf77412f10f54f841[m
+Author: ikeblem.c.silva <ikeblem.c.silva@CPX-0NRLRSI7LPR.dir.svc.accenture.com>
+Date:   Mon Sep 10 19:21:42 2018 -0300
+
+    Ajuste no html de login
+
+[33mcommit ec032f93b7473e63f0569aa1d042f3f3f6a4c82e[m
+Author: ikeblem.c.silva <ikeblem.c.silva@CPX-0NRLRSI7LPR.dir.svc.accenture.com>
+Date:   Mon Sep 10 16:17:12 2018 -0300
+
+    adicionado dois campos na modelo fone e email.
+
+[33mcommit 9d672192ff172ef266256d7752f2b6fce9711b91[m
+Author: Dieggo Siqueira <dieggo.p.de.sique@accenture.com>
+Date:   Mon Sep 10 14:18:14 2018 -0300
+
+    Retirado notempty e colocado notnull
+
+[33mcommit 3b4d681f986264ae488c9c818a37df085deea0ae[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Sun Sep 9 12:39:46 2018 -0300
+
+    Ajuste para formulario de login
+
+[33mcommit 1541e4e2b71266b511287eab3fcf7bc4a680a7b8[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Sun Sep 9 12:26:33 2018 -0300
+
+    Refact de entidades Model com mapeamentos de relacionamentos
+
+[33mcommit f60833d092087463a349b59761e3418822717087[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Sun Sep 9 11:33:48 2018 -0300
+
+    Ajustes em anotações
+
+[33mcommit d79e313aaf1442600a7074de85e79ec05b5da16d[m
+Author: Silva <ikeblem.c.silva@accenture.com>
+Date:   Sun Sep 9 11:12:17 2018 -0300
+
+    commit das classes modificadas
+
+[33mcommit 2581b9cd72b47ae70cc797668e7efa28f68a97e6[m
+Author: ikeblem.c.silva <ikeblem.c.silva@CPX-0NRLRSI7LPR.dir.svc.accenture.com>
+Date:   Sat Sep 8 11:58:44 2018 -0300
+
+    Criação das Classes Model e Repository.
+
+[33mcommit 2a41a6fb12722a6a60fa438b06523e484519edc2[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Fri Sep 7 21:29:28 2018 -0300
+
+    ajuste para inclusão de model de regras de administrador
+
+[33mcommit 0ee22287bdae3aeb120c904a8cd2117ced5020c4[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Fri Sep 7 00:35:40 2018 -0300
+
+    ajuste
+
+[33mcommit 6fba54d393f056fb13920282018d1a85b31e9016[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Fri Sep 7 00:34:37 2018 -0300
+
+    Implementação de sistema de login por regras
+
+[33mcommit ac17a3dcbd432d47a638b0c1c0c41cfe894a29ed[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Thu Aug 30 20:45:28 2018 -0300
+
+    Primeiro Controller e Spring-Security
+
+[33mcommit a968d716e01be57280ce2fd34f34b76f9e45535f[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Thu Aug 30 20:39:26 2018 -0300
+
+    Readme
+
+[33mcommit b400ee6d683c529cf6fefee28e2089d0ca7ff2cf[m
+Merge: 9de6159 7e9aee5
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Thu Aug 30 20:37:12 2018 -0300
+
+    Merge branch 'master' of https://github.com/dieggop/pernambuco-sat
+
+[33mcommit 9de6159758c79c95bd3dc05c0aae012c902e97d3[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Thu Aug 30 20:34:13 2018 -0300
+
+    Primeiro commit
+
+[33mcommit 7e9aee5e293059451a319ee4e3f69147f59c2375[m
+Author: Dieggo Carrilho <dieggopsc@gmail.com>
+Date:   Thu Aug 30 20:25:59 2018 -0300
+
+    Initial commit
